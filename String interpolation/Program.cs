@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Simple_Maths
+namespace String_interpolation
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            //Basics: Simple maths
+            //String interpolation - Basics: Simple maths
             //1
             Console.WriteLine($"-1 + 4* 6 = {-1 + 4 * 6}");
             double a = -1 + 4 * (double)6;
@@ -36,6 +35,27 @@ namespace Simple_Maths
             int f = 7 / (int)3.0;
             Console.WriteLine($"7 / 3.0 = {f}");
             Console.WriteLine($"7 / 3.0 = {7 / 3.0}");
+            Console.ReadLine();
+            Console.Clear();
+
+            //String interpolation - Gewicht in space
+            Console.WriteLine("Uw gewicht in kg?");
+            double gewichtOpAarde = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"\nGewicht op Aarde: {gewichtOpAarde} kg.");
+            Console.WriteLine($"Gewicht op Mercurius: {gewichtOpAarde * .38} kg.");
+            Console.WriteLine($"Gewicht op Venus: {gewichtOpAarde * .91} kg.");
+            Console.WriteLine($"Gewicht op Mars: {gewichtOpAarde * .38} kg.");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"Gewicht op Jupiter: {gewichtOpAarde * 2.34} kg.");
+            Console.ResetColor();
+            Console.WriteLine($"Gewicht op Saturnus: {gewichtOpAarde * 1.06} kg.");
+            Console.WriteLine($"Gewicht op Uranus: {gewichtOpAarde * .92} kg.");
+            Console.WriteLine($"Gewicht op Neptunus: {gewichtOpAarde * 1.19} kg.");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Gewicht op Pluto: {gewichtOpAarde * .06} kg.");
+            Console.ResetColor();
+
             Console.ReadLine();
         }
     }
