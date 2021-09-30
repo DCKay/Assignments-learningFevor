@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String interpolation", "Str
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCII Art and Colors", "ASCII Art and Colors\ASCII Art and Colors.csproj", "{DB49CC03-1154-4B60-B0F9-6DEE2523B169}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Systeem informatie", "Systeem informatie\Systeem informatie.csproj", "{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DB49CC03-1154-4B60-B0F9-6DEE2523B169}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB49CC03-1154-4B60-B0F9-6DEE2523B169}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB49CC03-1154-4B60-B0F9-6DEE2523B169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
