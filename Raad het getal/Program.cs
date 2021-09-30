@@ -16,12 +16,12 @@ namespace Raad_het_getal
             string pogingString;
             bool gevonden = false;
             Random rand = new Random();
-            getal = rand.Next(0, 10);
+            getal = rand.Next(0, 100);
 
             while (!gevonden)
             {
                 aantalPogingen++;
-                Console.WriteLine("Geef een getal tussen 0 en 10");
+                Console.WriteLine("Geef een getal tussen 0 en 100");
                 pogingString = Console.ReadLine();
                 poging = int.Parse(pogingString);
 
