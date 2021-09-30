@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASCII Art and Colors", "ASC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Systeem informatie", "Systeem informatie\Systeem informatie.csproj", "{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Op de poef", "Op de poef\Op de poef.csproj", "{C6A9FE3C-A5C6-4CBF-89CA-1A117F9A416F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C35E96-BC0B-4CEC-B4DD-1CDD0ED82305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A9FE3C-A5C6-4CBF-89CA-1A117F9A416F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A9FE3C-A5C6-4CBF-89CA-1A117F9A416F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A9FE3C-A5C6-4CBF-89CA-1A117F9A416F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A9FE3C-A5C6-4CBF-89CA-1A117F9A416F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
