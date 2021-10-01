@@ -26,6 +26,9 @@ namespace Seizoenen
             string winter;
             switch (maand)
             {
+                default:
+                    Console.WriteLine("U heeft Ongekend ingegeven.");
+                    break;
                 case 3:
                 case 4:
                 case 5:
@@ -65,10 +68,7 @@ namespace Seizoenen
                     {
                         Console.WriteLine("Dit is een koude maand.");
                     }
-                    break;
-                default:
-                    Console.WriteLine("U heeft Ongekend ingegeven.");
-                    break;                  
+                    break;                 
             }
 
 
