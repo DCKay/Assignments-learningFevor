@@ -24,6 +24,7 @@ namespace Seizoenen
             string zomer;
             string herfst;
             string winter;
+
             switch (maand)
             {
                 default:
@@ -71,8 +72,6 @@ namespace Seizoenen
                     break;                 
             }
 
-
-            
             Console.ReadLine();
         }
     }
