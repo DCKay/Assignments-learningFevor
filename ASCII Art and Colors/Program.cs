@@ -11,7 +11,6 @@ namespace ASCII_Art_and_Colors
         static void Main(string[] args)
         {
             var green = ConsoleColor.Green;
-
             Console.WriteLine("/$$   /$$");
             Console.WriteLine("| $$  /$$/");
             Console.Write("| $$ /$$/");
@@ -41,8 +40,6 @@ namespace ASCII_Art_and_Colors
             Console.WriteLine("                    |  $$$$$$/");
             Console.WriteLine("                     \\______/");
             Console.ReadLine();
-
-
         }
     }
 }
