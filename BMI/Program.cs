@@ -24,6 +24,7 @@ namespace BMI
             double gewicht = Convert.ToDouble(Console.ReadLine());
             double BMI = Math.Round(gewicht / Math.Pow((lengteCmeter / 100), 2));
             Console.WriteLine($"Uw BMI bedraagt : {Math.Round(gewicht / Math.Pow((lengteCmeter / 100), 2))}");
+
             if (BMI <= 18.5)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -49,6 +50,7 @@ namespace BMI
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine($"{BodyMassIndex.Ernstigezwaarlijvigheid}. Je moet dringend vermageren want je gezondheid is in gevaar (of je hebt je lengte of gewicht in verkeerde eenheid ingevoerd).");
             }
+
             Console.ReadLine();
         }
     }
