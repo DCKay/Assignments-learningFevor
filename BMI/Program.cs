@@ -10,10 +10,10 @@ namespace BMI
     {
         enum BodyMassIndex
         {
-            Ernstige_zwaarlijvigheid,
+            Ernstigezwaarlijvigheid,
             Zwaarlijvig,
             Overgewicht,
-            Normaal_Gewicht,
+            NormaalGewicht,
             Ondergewicht
         }
         static void Main(string[] args)
@@ -32,7 +32,7 @@ namespace BMI
             else if (BMI >= 18.6 && BMI <= 24.9)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"{BodyMassIndex.Normaal_Gewicht}");
+                Console.WriteLine($"{BodyMassIndex.NormaalGewicht}");
             }
             else if (BMI >= 25 && BMI <= 29.9)
             {
@@ -47,7 +47,7 @@ namespace BMI
             else
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine($"{BodyMassIndex.Ernstige_zwaarlijvigheid}. Je moet dringend vermageren want je gezondheid is in gevaar (of je hebt je lengte of gewicht in verkeerde eenheid ingevoerd).");
+                Console.WriteLine($"{BodyMassIndex.Ernstigezwaarlijvigheid}. Je moet dringend vermageren want je gezondheid is in gevaar (of je hebt je lengte of gewicht in verkeerde eenheid ingevoerd).");
             }
             Console.ReadLine();
         }
