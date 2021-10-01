@@ -10,30 +10,30 @@ namespace ASCII_Art_and_Colors
     {
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            var green = ConsoleColor.Green;
 
             Console.WriteLine("/$$   /$$");
             Console.WriteLine("| $$  /$$/");
             Console.Write("| $$ /$$/");
             Console.ResetColor();
             Console.Write("   /$$$$$$  /$$   /$$\n");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = green;
             Console.Write("| $$$$$/");
             Console.ResetColor();
             Console.Write("   |____  $$| $$  | $$\n");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = green;
             Console.Write("| $$  $$");
             Console.ResetColor();
             Console.Write("    /$$$$$$$| $$  | $$\n");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = green;
             Console.Write("| $$\\  $$");
             Console.ResetColor();
             Console.Write("  /$$__  $$| $$  | $$\n");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = green;
             Console.Write("| $$ \\  $$");
             Console.ResetColor();
             Console.Write("|  $$$$$$$|  $$$$$$$\n");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = green;
             Console.Write("| __/ \\__/");
             Console.ResetColor();
             Console.Write(" \\_______/ \\____  $$\n");
