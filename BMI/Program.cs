@@ -44,7 +44,7 @@ namespace BMI
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"{BodyMassIndex.Zwaarlijvig} (obesitas). Verhoogde kans op allerlei aandoeningen zoals diabetes, hartaandoeningen en rugklachten. Je zou 5 tot 10 kg moeten vermageren.");
             }
-            else if (BMI >= 40)
+            else
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine($"{BodyMassIndex.Ernstige_zwaarlijvigheid}. Je moet dringend vermageren want je gezondheid is in gevaar (of je hebt je lengte of gewicht in verkeerde eenheid ingevoerd).");
