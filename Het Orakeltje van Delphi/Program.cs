@@ -17,17 +17,16 @@ namespace Het_Orakeltje_van_Delphi
             int gemiddeldeMan = 120;
             int gemiddeldeVrouw = 150;
             Random mygen = new Random();
-            int getal1 = 0;
 
             switch (geslacht)
             {
                 case 'v':
-                    getal1 = mygen.Next(5, gemiddeldeVrouw - leeftijd);
-                    Console.WriteLine($"Je zal nog {getal1} jaar leven.");
+                    int dood = mygen.Next(5, gemiddeldeVrouw - leeftijd);
+                    Console.WriteLine($"Je zal nog {dood} jaar leven.");
                     break;
                 case 'm':
-                    getal1 = mygen.Next(5, gemiddeldeMan - leeftijd);
-                    Console.WriteLine($"Je zal nog {getal1} jaar leven.");
+                    dood = mygen.Next(5, gemiddeldeMan - leeftijd);
+                    Console.WriteLine($"Je zal nog {dood} jaar leven.");
                     break;
                 default:
                     Console.WriteLine("Ongekende optie");
