@@ -10,11 +10,11 @@ namespace Seizoenen
     {
         enum Seizoenen
         {
+            Onbekend,
             Winter,
             Lente,
             Zomer,
-            Herfst,
-            Onbekend
+            Herfst
         }
         static void Main(string[] args)
         {
