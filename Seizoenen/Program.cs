@@ -8,17 +8,10 @@ namespace Seizoenen
 {
     class Program
     {
-        enum Seizoenen
-        {
-            Onbekend,
-            Winter,
-            Lente,
-            Zomer,
-            Herfst
-        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Geef mij een maandnummer");
+           /* Console.WriteLine("Geef mij een maandnummer");
             int maand = Convert.ToInt32(Console.ReadLine());
             string lente;
             string zomer;
@@ -69,9 +62,10 @@ namespace Seizoenen
                     {
                         Console.WriteLine("Dit is een koude maand.");
                     }
-                    break;                 
-            }
+                    break;
+            }*/
 
+            Seizoen.Run();
             Console.ReadLine();
         }
     }

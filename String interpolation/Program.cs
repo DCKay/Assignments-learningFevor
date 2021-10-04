@@ -46,12 +46,15 @@ namespace String_interpolation
             Console.WriteLine($"Gewicht op Mercurius: {gewichtOpAarde * .38} kg.");
             Console.WriteLine($"Gewicht op Venus: {gewichtOpAarde * .91} kg.");
             Console.WriteLine($"Gewicht op Mars: {gewichtOpAarde * .38} kg.");
+
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Gewicht op Jupiter: {gewichtOpAarde * 2.34} kg.");
             Console.ResetColor();
+
             Console.WriteLine($"Gewicht op Saturnus: {gewichtOpAarde * 1.06} kg.");
             Console.WriteLine($"Gewicht op Uranus: {gewichtOpAarde * .92} kg.");
             Console.WriteLine($"Gewicht op Neptunus: {gewichtOpAarde * 1.19} kg.");
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Gewicht op Pluto: {gewichtOpAarde * .06} kg.");
             Console.ResetColor();
