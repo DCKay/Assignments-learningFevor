@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Film Default", "Film Defaul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muziek en Methoden", "Muziek en Methoden\Muziek en Methoden.csproj", "{0F7E0318-B3EB-4210-8F9C-E77E3147955B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vraag Array", "Vraag Array\Vraag Array.csproj", "{5D982759-DD5C-4F8B-8009-8DDBCB53B660}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{0F7E0318-B3EB-4210-8F9C-E77E3147955B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F7E0318-B3EB-4210-8F9C-E77E3147955B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F7E0318-B3EB-4210-8F9C-E77E3147955B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D982759-DD5C-4F8B-8009-8DDBCB53B660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D982759-DD5C-4F8B-8009-8DDBCB53B660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D982759-DD5C-4F8B-8009-8DDBCB53B660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D982759-DD5C-4F8B-8009-8DDBCB53B660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
