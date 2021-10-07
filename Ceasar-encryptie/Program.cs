@@ -8,15 +8,31 @@ namespace Ceasar_encryptie
 
         private static void Main(string[] args)
         {
+            Console.WriteLine("Encrypt:");
+            string encryptedString = Encrypt(ConvertedZin(), GetKey());
+            Console.WriteLine("Decrypt:");
+            string decryptedstring = Decrypt(ConvertedZin(), GetKey());
+            Console.WriteLine("");
+            Console.WriteLine($"encrypt: {encryptedString}");
+            Console.WriteLine($"decrypt: {decryptedstring}");
+
+            Console.ReadLine();
+        }
+
+        public static char[] ConvertedZin()
+        {
             //aanmaak zin met omzet naar char
             Console.WriteLine("Geef mij uw zin.");
             string zin = Console.ReadLine();
             char[] convertedZin = zin.ToLower().ToCharArray();
+            return convertedZin;
+        }
 
-            string encryptedString = Encrypt(convertedZin, 3);
-            Console.WriteLine(encryptedString);
-
-            Console.ReadLine();
+        public static int GetKey()
+        {
+            Console.WriteLine("Geef mij uw sleutel. (1-26)");
+            int key = Convert.ToInt32(Console.ReadLine());
+            return key;
         }
 
         // Single Responsability: Een methode zou maar 1 ding moeten doen
@@ -46,8 +62,31 @@ namespace Ceasar_encryptie
             return new string(encryptedArray).ToUpper();
         }
 
-        public void Decrypt(char[] charArray, int key)
+        public static string Decrypt(char[] charArray, int key)
         {
+            char[] decryptedArray = new char[charArray.Length];
+            key = alfabet.Length - key;
+
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                if (charArray[i] == ' ')
+                {
+                    continue;
+                }
+
+                int positionInAlfabet = alfabet.IndexOf(charArray[i]);
+                int newPositionInAlfabet = positionInAlfabet + key;
+
+                if (newPositionInAlfabet >= alfabet.Length)
+                {
+                    newPositionInAlfabet = newPositionInAlfabet - alfabet.Length;
+                }
+
+                decryptedArray[i] = alfabet[newPositionInAlfabet];
+            }
+
+            return new string(decryptedArray).ToLower();
         }
+    
     }
 }
