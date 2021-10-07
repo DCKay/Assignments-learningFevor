@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vraag Array", "Vraag Array\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeveringsBedrijf", "LeveringsBedrijf\LeveringsBedrijf.csproj", "{36B95C34-298F-4402-B2B3-AB33F0020515}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ceasar-encryptie", "Ceasar-encryptie\Ceasar-encryptie.csproj", "{0DC6F190-2D51-4A74-BAF3-E52313021C7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{36B95C34-298F-4402-B2B3-AB33F0020515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36B95C34-298F-4402-B2B3-AB33F0020515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36B95C34-298F-4402-B2B3-AB33F0020515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC6F190-2D51-4A74-BAF3-E52313021C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC6F190-2D51-4A74-BAF3-E52313021C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC6F190-2D51-4A74-BAF3-E52313021C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC6F190-2D51-4A74-BAF3-E52313021C7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
