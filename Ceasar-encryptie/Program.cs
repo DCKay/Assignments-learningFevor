@@ -1,41 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ceasar_encryptie
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private const string alfabet = "abcdefghijklmnopqrstuvwxyz";
+
+        private static void Main(string[] args)
         {
             //aanmaak zin met omzet naar char
-            Console.WriteLine("Gef mij uw zin.");
-            string zin = Convert.ToString(Console.ReadLine());
-            char[] convertedZin = zin.ToCharArray();
+            Console.WriteLine("Geef mij uw zin.");
+            string zin = Console.ReadLine();
+            char[] convertedZin = zin.ToLower().ToCharArray();
 
-            char[] encrypt = new char[26];
-            char[] decrypt = new char[26];
-            int x = 0;
-
-
-
-            for (int i = 0; i < encrypt.Length; i++)
-            {
-                encrypt[i] = (char)(97 + i);
-                decrypt[i] = encrypt[i];
-            }
-
-            for (int i = 0; i < convertedZin.Length; i++)
-            {
-                convertedZin[i] = encrypt[i];
-            }
-
-            string newZin = new string(convertedZin);
-            Console.WriteLine(newZin);
+            string encryptedString = Encrypt(convertedZin, 3);
+            Console.WriteLine(encryptedString);
 
             Console.ReadLine();
+        }
+
+        // Single Responsability: Een methode zou maar 1 ding moeten doen
+        // Heeft een methode data nodig? Vraag dan om deze data mbv input parameters ipv deze data zelf te gaan zoeken.
+        public static string Encrypt(char[] charArray, int key)
+        {
+            char[] encryptedArray = new char[charArray.Length];
+
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                if (charArray[i] == ' ')
+                {
+                    continue;
+                }
+
+                int positionInAlfabet = alfabet.IndexOf(charArray[i]);
+                int newPositionInAlfabet = positionInAlfabet + key;
+
+                if (newPositionInAlfabet >= alfabet.Length)
+                {
+                    newPositionInAlfabet = newPositionInAlfabet - alfabet.Length;
+                }
+
+                encryptedArray[i] = alfabet[newPositionInAlfabet];
+            }
+
+            return new string(encryptedArray).ToUpper();
+        }
+
+        public void Decrypt(char[] charArray, int key)
+        {
         }
     }
 }
