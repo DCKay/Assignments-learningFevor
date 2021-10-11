@@ -19,7 +19,7 @@ namespace Ceasar_encryptie
             Console.ReadLine();
         }
 
-        public static char[] ConvertedZin()
+        private static char[] ConvertedZin()
         {
             //aanmaak zin met omzet naar char
             Console.WriteLine("Geef mij uw zin.");
@@ -28,7 +28,7 @@ namespace Ceasar_encryptie
             return convertedZin;
         }
 
-        public static int GetKey()
+        private static int GetKey()
         {
             Console.WriteLine("Geef mij uw sleutel. (1-26)");
             int key = Convert.ToInt32(Console.ReadLine());
@@ -37,22 +37,22 @@ namespace Ceasar_encryptie
 
         // Single Responsability: Een methode zou maar 1 ding moeten doen
         // Heeft een methode data nodig? Vraag dan om deze data mbv input parameters ipv deze data zelf te gaan zoeken.
-        public static string Encrypt(char[] charArray, int key)
+        private static string Encrypt(char[] charArray, int key)
         {
-            char[] encryptedArray = Crypt(charArray, key);
+            char[] encryptedArray = PerformCrypt(charArray, key);
             return new string(encryptedArray).ToUpper();
         }
 
-        public static string Decrypt(char[] charArray, int key)
+        private static string Decrypt(char[] charArray, int key)
         {
             int decryptKey = alfabet.Length - key;
-            char[] decryptedArray = Crypt(charArray, decryptKey);
+            char[] decryptedArray = PerformCrypt(charArray, decryptKey);
             return new string(decryptedArray).ToLower();
         }
 
-        private static char[] Crypt(char[] charArray, int key)
+        private static char[] PerformCrypt(char[] charArray, int key)
         {
-            char[] decryptedArray = new char[charArray.Length];
+            char[] cryptedArray = new char[charArray.Length];
 
             for (int i = 0; i < charArray.Length; i++)
             {
@@ -69,9 +69,9 @@ namespace Ceasar_encryptie
                     newPositionInAlfabet = newPositionInAlfabet - alfabet.Length;
                 }
 
-                decryptedArray[i] = alfabet[newPositionInAlfabet];
+                cryptedArray[i] = alfabet[newPositionInAlfabet];
             }
-            return decryptedArray;
+            return cryptedArray;
         }
     }
 }
