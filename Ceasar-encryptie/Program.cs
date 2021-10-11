@@ -39,33 +39,20 @@ namespace Ceasar_encryptie
         // Heeft een methode data nodig? Vraag dan om deze data mbv input parameters ipv deze data zelf te gaan zoeken.
         public static string Encrypt(char[] charArray, int key)
         {
-            char[] encryptedArray = new char[charArray.Length];
-
-            for (int i = 0; i < charArray.Length; i++)
-            {
-                if (charArray[i] == ' ')
-                {
-                    continue;
-                }
-
-                int positionInAlfabet = alfabet.IndexOf(charArray[i]);
-                int newPositionInAlfabet = positionInAlfabet + key;
-
-                if (newPositionInAlfabet >= alfabet.Length)
-                {
-                    newPositionInAlfabet = newPositionInAlfabet - alfabet.Length;
-                }
-
-                encryptedArray[i] = alfabet[newPositionInAlfabet];
-            }
-
+            char[] encryptedArray = Crypt(charArray, key);
             return new string(encryptedArray).ToUpper();
         }
 
         public static string Decrypt(char[] charArray, int key)
         {
+            int decryptKey = alfabet.Length - key;
+            char[] decryptedArray = Crypt(charArray, decryptKey);
+            return new string(decryptedArray).ToLower();
+        }
+
+        private static char[] Crypt(char[] charArray, int key)
+        {
             char[] decryptedArray = new char[charArray.Length];
-            key = alfabet.Length - key;
 
             for (int i = 0; i < charArray.Length; i++)
             {
@@ -84,9 +71,7 @@ namespace Ceasar_encryptie
 
                 decryptedArray[i] = alfabet[newPositionInAlfabet];
             }
-
-            return new string(decryptedArray).ToLower();
+            return decryptedArray;
         }
-    
     }
 }
