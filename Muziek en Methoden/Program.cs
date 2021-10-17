@@ -148,6 +148,8 @@ namespace Muziek_en_Methoden
              * A = Mi
              */
             var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
+            // TODO: De waardes 1000 voor mSecoden en 1 voor octaaf worden vaak herhaald. Kan je hier default values van maken?
             Re(1000, 1);
             Sol(1300, 1);
             La(1400, 1);

@@ -10,19 +10,26 @@ namespace Op_de_poef
     {
         static void Main(string[] args)
         {
+            // TODO: Denk aan de whitespacing.
+            // Extra: Kan je deze oefening meer 'geavanceerd' maken door gebruik te maken van methodes en lussen?
             decimal totaalTab = 0;
+
             Console.WriteLine("Voer bedrag in?");
             decimal bedrag = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine($"De poef staat op {totaalTab += bedrag} euro.");
+
             Console.WriteLine("Voer bedrag in?");
             bedrag = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine($"De poef staat op {totaalTab += bedrag} euro.");
+
             Console.WriteLine("Voer bedrag in?");
             bedrag = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine($"De poef staat op {totaalTab += bedrag} euro.");
+
             Console.WriteLine("Voer bedrag in?");
             bedrag = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine($"De poef staat op {totaalTab += bedrag} euro.");
+
             Console.WriteLine("Voer bedrag in?");
             bedrag = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine($"De poef staat op {totaalTab += bedrag} euro.");

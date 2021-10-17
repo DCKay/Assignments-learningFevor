@@ -1,27 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Raad_het_getal
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            int getal;
-            int poging = 0;
-            int aantalPogingen = 0;
-            string pogingString;
-            bool gevonden = false;
+            // TODO: Declaratie & Assignment kunnen op 1 lijn.
             Random rand = new Random();
+            int getal;
             getal = rand.Next(0, 100);
+
+            // TODO: Probeer variabelen zo dicht mogelijk te initialiseren waar ze nodig zijn
+            int poging = 0;
+            string pogingString;
+
+            int aantalPogingen = 0;
+            bool gevonden = false;
 
             while (!gevonden)
             {
                 aantalPogingen++;
+
+                // TODO: Er gebeurt geen controle of een getal tussen 0 en 100 ligt
                 Console.WriteLine("Geef een getal tussen 0 en 100");
+
+                // TODO: Onderstaande 2 lijnen kunnen 1 lijn worden.
                 pogingString = Console.ReadLine();
                 poging = int.Parse(pogingString);
 
