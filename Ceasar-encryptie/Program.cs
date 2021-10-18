@@ -4,27 +4,36 @@ namespace Ceasar_encryptie
 {
     internal class Program
     {
-        private const string alfabet = "abcdefghijklmnopqrstuvwxyz";
+
+        // Klein beetje refactoring gedaan in deze class. - Michiel
+        private const string Alfabet = "abcdefghijklmnopqrstuvwxyz";
 
         private static void Main(string[] args)
         {
             Console.WriteLine("Encrypt:");
-            string encryptedString = Encrypt(ConvertedZin(), GetKey());
+            string encryptedString = Encrypt(GetZin(), GetKey());
             Console.WriteLine("Decrypt:");
-            string decryptedstring = Decrypt(ConvertedZin(), GetKey());
+            string decryptedstring = Decrypt(GetZin(), GetKey());
+            
             Console.WriteLine("");
-            Console.WriteLine($"encrypt: {encryptedString}");
-            Console.WriteLine($"decrypt: {decryptedstring}");
-
+            PrintResultaat(encryptedString, decryptedstring);
             Console.ReadLine();
         }
 
-        private static char[] ConvertedZin()
+        private static void PrintResultaat(string encryptedString, string decryptedstring)
+        {
+            Console.WriteLine($"encrypt: {encryptedString}");
+            Console.WriteLine($"decrypt: {decryptedstring}");
+        }
+
+        private static char[] GetZin()
         {
             //aanmaak zin met omzet naar char
             Console.WriteLine("Geef mij uw zin.");
+
             string zin = Console.ReadLine();
             char[] convertedZin = zin.ToLower().ToCharArray();
+
             return convertedZin;
         }
 
@@ -32,6 +41,7 @@ namespace Ceasar_encryptie
         {
             Console.WriteLine("Geef mij uw sleutel. (1-26)");
             int key = Convert.ToInt32(Console.ReadLine());
+
             return key;
         }
 
@@ -45,7 +55,7 @@ namespace Ceasar_encryptie
 
         private static string Decrypt(char[] charArray, int key)
         {
-            int decryptKey = alfabet.Length - key;
+            int decryptKey = Alfabet.Length - key;
             char[] decryptedArray = PerformCrypt(charArray, decryptKey);
             return new string(decryptedArray).ToLower();
         }
@@ -61,15 +71,15 @@ namespace Ceasar_encryptie
                     continue;
                 }
 
-                int positionInAlfabet = alfabet.IndexOf(charArray[i]);
+                int positionInAlfabet = Alfabet.IndexOf(charArray[i]);
                 int newPositionInAlfabet = positionInAlfabet + key;
 
-                if (newPositionInAlfabet >= alfabet.Length)
+                if (newPositionInAlfabet >= Alfabet.Length)
                 {
-                    newPositionInAlfabet = newPositionInAlfabet - alfabet.Length;
+                    newPositionInAlfabet -= Alfabet.Length;
                 }
 
-                cryptedArray[i] = alfabet[newPositionInAlfabet];
+                cryptedArray[i] = Alfabet[newPositionInAlfabet];
             }
             return cryptedArray;
         }

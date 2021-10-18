@@ -12,6 +12,7 @@ namespace Euler_project
         {
             int getal = 100000;
             int som = 0;
+
             for (int i = 0; i <= getal; i++)
             {
                 if (i <= 0)
@@ -19,10 +20,12 @@ namespace Euler_project
                     //skip
                     continue;
                 }
+
                 if (i % 3 == 0 || i % 5 == 0)
                 {
                     Console.WriteLine(i);
                     som += i;
+
                     if (som >= 234168)
                     {
                         // Force end
