@@ -10,6 +10,7 @@ namespace Boekhouder
     {
         static void Main(string[] args)
         {
+            int wijziging;
             int balans = 0;
             int somNegative = 0;
 
